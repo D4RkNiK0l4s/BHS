@@ -1,5 +1,5 @@
 # "gr" is the default keymap so we don't have to include this line.
-keymap gr
+keymap el
 
 # We don't have to write mount points for boot, home, root and swap partitions.
 # It is needed for extra partitions.

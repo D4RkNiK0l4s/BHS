@@ -194,7 +194,7 @@ mirror_check() {
     
     for mrr in ${mirrorlist}
     do
-        # Trimming mirror name. Ex. http://gentoo.kiev.ua/ftp -->> gentoo.kiev.ua
+        # Trimming mirror name. Ex. http://files.gentoo.gr/ftp -->> files.gentoo.gr
         [[ "$(ping -nc3 -i2 $(echo ${mrr} | sed -e 's/.*\:\/\///' -e 's/\/.*$//'))" ]] && { a2v "mirror=\"${mrr}\""; break; }
     done
     
@@ -1724,7 +1724,7 @@ get_tar() {
         mirrorlist="http://ftp.linux.org.tr/gentoo ftp://ftp.linux.org.tr/gentoo http://gentoo.supp.name ftp://mirrors.linuxant.fr/distfiles.gentoo.org"
     ;;
     br|us)
-        mirrorlist="http://gentoo.supp.name ftp://mirrors.linuxant.fr/distfiles.gentoo.org http://ftp.linux.org.tr/gentoo ftp://ftp.linux.org.tr/gentoo"
+        mirrorlist="http://files.gentoo.gr http://ftp.ntua.gr/pub/linux/gentoo ftp://ftp.cc.uoc.gr/mirrors/linux/gentoo http://ftp.cc.uoc.gr/mirrors/linux/gentoo ftp://files.gentoo.gr ftp://ftp.ntua.gr/pub/linux/gentoo"
     ;;
     gr|el) 
         mirrorlist="http://files.gentoo.gr http://ftp.ntua.gr/pub/linux/gentoo ftp://ftp.cc.uoc.gr/mirrors/linux/gentoo http://ftp.cc.uoc.gr/mirrors/linux/gentoo ftp://files.gentoo.gr ftp://ftp.ntua.gr/pub/linux/gentoo" 
